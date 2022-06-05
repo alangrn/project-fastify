@@ -4,7 +4,7 @@ const build = (opts = {}) => {
   const app = fastify(opts);
 
   app.get('/', async (request, reply) => {
-    reply.send({ hello: 'world' });
+    reply.code(200).send({ hello: 'world!' });
   });
 
   return app;
